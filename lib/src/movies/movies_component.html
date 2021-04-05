@@ -1,22 +1,5 @@
 <!-- Components info: https://angulardart.dev/components -->
 <!-- <div>
-    <material-input label="What do you need to do?"
-                    autoFocus floatingLabel style="width:80%"
-                    [(ngModel)]="nameMovie"
-                    (keyup.enter)="add()">
-    </material-input>
-  
-    <material-fab mini raised
-                  (trigger)="add()"
-                  [disabled]="nameMovie.isEmpty">
-      <material-icon icon="add"></material-icon>
-    </material-fab>
-  </div>
-  
-  <p *ngIf="items.isEmpty">
-    Nothing to do! Add items above.
-  </p>
-  
   <div *ngIf="items.isNotEmpty">
     <ul>
         <li *ngFor="let item of items; let i=index">
@@ -33,17 +16,14 @@
 
 <header>
   <div>
-    <h1>Consulta de filmes e serie!</h1>
-    <material-input
-      label="Digite o nome do filme que deseja buscar:"
-      autoFocus
-      floatingLabel
-      style="width: 80%"
-      [(ngModel)]="nameMovie"
-      (keyup.enter)="getMovie(nameMovie)"
-    >
-    </material-input>
-    <!-- <button type="button" class="btn btn-primary" (click)="showMovie(getMovie(nameMovie))">Buscar</button> -->
+    <!-- <h1>Consulta de filmes e serie!</h1> -->
+    <input type="text" placeholder="Digite o nome do filme que deseja buscar:"
+    floatingLabel
+    autoFocus
+    style="width: 80%"
+    [(ngModel)]="nameMovie"
+    (keyup.enter)="getMovie(nameMovie)" >
+    
     <button type="button" class="btn btn-primary" (click)="getMovie(nameMovie)">
       Buscar
     </button>
@@ -55,15 +35,18 @@
 
 <body>
   <div class="grid-container">
-    <div class="movie-card">
-      <img
+    <div class="movie-card" *ngIf="testBool == true">
+      <div *ngFor="let f of listMovie; let i = index">
+        <p>{{listMovie[i]}}</p>
+      </div>
+      <!-- <img
         src="https://cdn.pixabay.com/photo/2020/02/26/07/21/milky-way-4880864_1280.jpg"
         alt="Ceu noturno"
         width="200"
         height="275"
       />
       <h5>Titulo</h5>
-      <h6>2021</h6>
+      <h6>2021</h6> -->
     <!-- <div class="movie-card" >
       <img
         src="https://cdn.pixabay.com/photo/2020/02/26/07/21/milky-way-4880864_1280.jpg"
