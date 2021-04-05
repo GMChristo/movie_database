@@ -27,7 +27,6 @@ class MoviesComponent implements OnInit {
   bool testBool = false;
   List listMovie = [];
 
-
   MoviesComponent(this.moviesService);
 
   @override
@@ -43,10 +42,14 @@ class MoviesComponent implements OnInit {
     
     for (var filme in jsonResponse['results']) {
       print(filme['original_title']);
-      listMovie.add(filme['original_title']);
+      var novosDados = 'id: ${filme['id']}, name: ${filme['original_title']}';
+      listMovie.add(novosDados);
     }
     print(listMovie);
-    print(jsonResponse['total_results']);
+    print(listMovie[1]);
+    // print(listMovie[1]);
+    
+    // print(jsonResponse['total_results']);
     testBool = true;
     //adicionar condição de teste de retorno
   }
