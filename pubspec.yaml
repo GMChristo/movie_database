@@ -2,17 +2,17 @@ name: tbdb_teste_api_front
 description: A web app that uses AngularDart Components
 # version: 1.0.0
 # homepage: https://www.example.com
-
 environment:
   sdk: '>=2.7.0 <3.0.0'
 
 dependencies:
   angular: ^6.0.0
-  # angular_components: ^1.0.3
-  # angular_forms: any
-  # essential_rest: 1.1.22
   essential_components: ^1.9.21
-  http: ^0.12.2
+  essential_rest: 1.1.22
+  # dio: ^4.0.0
+  # http: ^0.13.1
+  dio: any
+  http: any
 
 dev_dependencies:
   angular_test: ^2.3.0
