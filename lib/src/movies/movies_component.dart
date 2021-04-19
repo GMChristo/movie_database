@@ -16,8 +16,6 @@ import 'package:essential_components/essential_components.dart';
     coreDirectives,
     formDirectives,
     EssentialSimpleSelectComponent,
-    // NgFor,
-    // NgIf,
   ],
   providers: [ClassProvider(MoviesService)],
 )
