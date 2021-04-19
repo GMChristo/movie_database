@@ -1,0 +1,13 @@
+<!-- <div>
+<img src="https://cdn.pixabay.com/photo/2020/02/26/07/21/milky-way-4880864_1280.jpg" alt="Ceu noturno" width="200"
+    height="275" />
+</div> -->
+
+<div *ngIf="movie != null">
+    <h2>{{movie.title}}</h2>
+    <div><label>id: </label>{{movie.id}}</div>
+    <div>
+      <label>name: </label>{{movie.title}}
+      <!-- <input [(ngModel)]="movie.name" placeholder="name"> -->
+    </div>
+  </div>
