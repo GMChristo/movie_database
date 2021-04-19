@@ -4,7 +4,7 @@ import 'package:essential_components/essential_components.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:angular/angular.dart';
-import 'package:tbdb_teste_api_front/src/movie/movie.dart';
+import 'package:tbdb_teste_api_front/src/movie/movie_old.dart';
 
 @Component(
   selector: 'movie',

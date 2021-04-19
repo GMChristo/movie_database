@@ -4,7 +4,7 @@ import 'package:angular_forms/angular_forms.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:angular/angular.dart';
-import 'package:tbdb_teste_api_front/src/movie/movie.dart';
+import 'package:tbdb_teste_api_front/src/movie/movie_old.dart';
 import 'package:tbdb_teste_api_front/src/movies/movie_service.dart';
 import 'package:essential_components/essential_components.dart';
 
@@ -67,13 +67,13 @@ class MoviesComponent implements OnInit {
     for (var filme in jsonResponse['results']) {
       print('FOR');
       int id = filme['id'].toInt();
-      Movie movie = Movie(id, filme['original_title'], filme['poster_path'], filme['release_date']);
-      // movie.id = filme['id'];
-      // movie.title = filme['original_title'];
-      // movie.poster = filme['poster_path'];
-      // movie.year = filme['release_date'];
-      print(movie.title);
-      listTesteMovie.add(movie);
+      Movie movie_old = Movie(id, filme['original_title'], filme['poster_path'], filme['release_date']);
+      // movie_old.id = filme['id'];
+      // movie_old.title = filme['original_title'];
+      // movie_old.poster = filme['poster_path'];
+      // movie_old.year = filme['release_date'];
+      print(movie_old.title);
+      listTesteMovie.add(movie_old);
       // print(filme['original_title']);
       // var novosDados = 'id: ${filme['id']}, name: ${filme['original_title']}, poster: ${filme['poster_path']}, release_date: ${filme['release_date']}';
       // listMovie.add(novosDados);
