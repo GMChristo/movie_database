@@ -1,0 +1,9 @@
+.card {
+    display: block;
+    width: 210;
+    height: 285;
+    background-color: antiquewhite;
+    align-items: center;
+    border: 2px;
+    border-style: groove;
+}

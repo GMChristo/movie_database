@@ -1,1 +1,33 @@
-Teste!
+<header>
+    <div>
+        <!-- <h1>Consulta de filmes e serie!</h1> -->
+        <input type="text" placeholder="Digite o nome do filme que deseja buscar:" floatingLabel autoFocus
+            style="width: 80%" [(ngModel)]="movieName" (keyup.enter)="getAll(movieName)">
+
+        <button type="button" class="btn btn-primary" (click)="getAll(movieName)">
+            Buscar
+        </button>
+    </div>
+    <div>
+        <img src="" alt="" id="poster" />
+    </div>
+</header>
+
+<body>
+    <div class="grid-container">
+        <!-- bloco funcionando -->
+        <div *ngIf="carregou == false">
+            Pesquise um filme ou serie!
+        </div>
+        <div class="movie-card" *ngIf="carregou == true">
+            <!-- colocar um carrosel para exibir e configurar card de exibição-->
+            <div *ngFor="let f of movies; let i = index">
+                <div class="card">
+                    <img src="https://image.tmdb.org/t/p/w500/{{movies[i].poster_path}}" alt="{{movies[i].title}}" width="200" height="275">
+                    <br><h4>{{movies[i].title}}</h4>
+                    <br>{{movies[i].release_date}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
